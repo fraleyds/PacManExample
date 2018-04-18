@@ -9,8 +9,10 @@ namespace PacMan
     public interface IPacManService
     {
         string[] ReadFile();
-        void CheckOutcome();
-        int AddLives();
-        int AddPoints();
+        bool CheckAlive();
+        void AddLives();
+        void AddPoints(string action);
+        void LoseLife(string action);
+        void FinalOutput();
     }
 }

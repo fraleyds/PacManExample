@@ -10,6 +10,7 @@ namespace PacMan
     {
         static void Main(string[] args)
         {
+            PacManController.RunGame();
         }
     }
 }
