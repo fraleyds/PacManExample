@@ -92,7 +92,6 @@ namespace PacMan
 
             pacMan.Points += pointIncrease;
             pacMan.PointIncrementer += pointIncrease;
-            Console.WriteLine($"Ghost modifier is {pacMan.GhostModifier}");
         }
     }
 }
