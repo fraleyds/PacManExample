@@ -42,7 +42,10 @@ namespace PacMan
         public void LoseLife(string action)
         {
             if (action == "invincibleghost")
+            {
                 pacMan.Lives--;
+                pacMan.GhostModifier = 1;
+            }
         }
 
         public void AddPoints(string action)
@@ -89,6 +92,7 @@ namespace PacMan
 
             pacMan.Points += pointIncrease;
             pacMan.PointIncrementer += pointIncrease;
+            Console.WriteLine($"Ghost modifier is {pacMan.GhostModifier}");
         }
     }
 }
