@@ -15,14 +15,14 @@ namespace PacMan
         {
             var actionSequence = service.ReadFile();
 
-            var incrementer = 0;
+            var i = 0;
 
             var length = actionSequence.Length;
             var gameLoop = true;
 
             while (gameLoop)
             {
-                var action = actionSequence[incrementer].ToLower();
+                var action = actionSequence[i].ToLower();
                 service.AddPoints(action);
                 service.AddLives();
                 service.LoseLife(action);
@@ -32,8 +32,8 @@ namespace PacMan
                     gameLoop = false;
 
                 //Ends the loop if the full array has been read
-                incrementer++;
-                if (incrementer == length - 1)
+                i++;
+                if (i == length - 1)
                     gameLoop = false;
             }
 
